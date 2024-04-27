@@ -1,0 +1,29 @@
+Git Notes
+- Git is a version control system to keep track of your code.
+- git init : turn folder into git repository
+- The git init command created that .git folder for you. It's what keeps track of all the things in your repository. Use git status to see the status of where you are. 
+- A git repository has branches to help keep track of things you are doing with your code. It's common to have a main branch which might be for your production code, and other branches for adding new features or fixing bugs. You can create and go to a new branch with git checkout -b new_branch. The -b stands for "branch". Use that command to switch to a new branch named main.
+ex: git checkout -b main
+- git status gives us status of branch
+- There's two steps to make git keep track of it for you. First you need to add it to the staging area like this: git add file_name
+- Now your file is in staging and will be added with the next commit. You aren't quite ready to commit this yet though. Use touch again to create sql_reference.json in your repo.
+- git commit -m "Initial commit" : to commit your code to the working tree branch
+- git log for viewing history of commits
+- git branch to see what branch you are on
+- git checkout branchname is to change branches
+- git diff to see code base changes
+- git log --oneline limits it to one line logs
+- git merge branchName : merge branches
+- git branch -d feat/add-create-table-reference the -d was to delete the branch
+- the checkout -b creates the branch and takes u there
+- git add . add all files to staging
+- since we added a fix in we want to "rebase the branch" so we use syntax git rebase main
+- git reset HEAD~1 undos last commit
+- You can put your changes aside with git stash. Stash your changes so you can add them to a different branch.
+- git stash list : view stash list
+- git stash show : view stash in small form
+- git stash pop : removes all stashes and commits them to your working tree
+- git stash show -p is for patch -View the full changes of the latest stash
+-You can add the latest stash while keeping it in the list with git stash apply
+- git stash show stash@{1} view stash
+- git stash drop stash@{0} drop stash
